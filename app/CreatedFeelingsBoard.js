@@ -1,7 +1,7 @@
 import { SafeAreaView, Text, useWindowDimensions, View } from "react-native";
 
 const CreatedFeelingsBoard = ({ route }) => {
-  const { selectedEmotions = [] } = route.params || {};
+  const { selectedEmotions = [] } = route?.params?.selectedEmotions ?? [];
   const { width, height } = useWindowDimensions();
   const isPortrait = height > width;
 
